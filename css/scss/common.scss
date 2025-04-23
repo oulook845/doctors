@@ -1,0 +1,16 @@
+#header{
+    .hd_banner{
+        height: 24px;
+        background-color: var(--mainColor-green);
+        position: relative;
+        ul{
+            position: absolute;
+            li{
+                font-size: 12px;
+                color:#fff;
+            }
+        }
+    }
+}
+#main{}
+#footer{}
