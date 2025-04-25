@@ -1,4 +1,81 @@
 #main #visual {
   height: 100vh;
-  background: url(../../images/index/main_top_slider01.jpg) no-repeat center/cover;
+}
+#main #visual .inner .vsl_slide {
+  position: relative;
+}
+#main #visual .inner .vsl_slide ul.vsl_bg {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#main #visual .inner .vsl_slide ul.vsl_bg li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#main #visual .inner .vsl_slide ul.vsl_bg li:nth-child(1) {
+  background-image: url(../../images/index/main_top_slider01.jpg);
+  z-index: 1;
+}
+#main #visual .inner .vsl_slide ul.vsl_bg li:nth-child(2) {
+  background-image: url(../../images/index/main_top_slider02.jpg);
+}
+#main #visual .inner .vsl_slide ul.vsl_bg li:nth-child(3) {
+  background-image: url(../../images/index/main_top_slider03.jpg);
+}
+#main #visual .inner .vsl_slide ul.vsl_textBox {
+  position: absolute;
+  left: 7%;
+  top: 62%;
+  z-index: 5;
+}
+#main #visual .inner .vsl_slide ul.vsl_textBox li {
+  width: max-content;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+#main #visual .inner .vsl_slide ul.vsl_textBox li.on {
+  display: block;
+}
+#main #visual .inner .vsl_slide ul.vsl_textBox li p {
+  font-size: 1.25rem;
+  word-break: keep-all;
+  letter-spacing: 0.2rem;
+}
+#main #visual .inner .vsl_slide ul.vsl_textBox li p b {
+  font-weight: 700;
+}
+#main #visual .inner .vsl_slide ul.vsl_textBox li h3 {
+  font-size: 11.3rem;
+  font-family: Marcellus, Noto Sans KR, sans-serif;
+  word-break: keep-all;
+}
+#main #visual .inner .vsl_slide .vsl_nav {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 7%;
+  bottom: 10%;
+  z-index: 5;
+}
+#main #visual .inner .vsl_slide .vsl_nav span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 12px;
+  border-radius: 50%;
+  background: #fff;
+}
+#main #visual .inner .vsl_slide .vsl_nav span.on {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  background: transparent;
 }

@@ -1,6 +1,85 @@
 #main {
   #visual {
     height: 100vh;
-    background: url(../../images/index/main_top_slider01.jpg) no-repeat center / cover;
+    .inner {
+      .vsl_slide {
+        position: relative;
+        ul.vsl_bg {
+          width: 100%;
+          height: 100vh;
+          position: relative;
+          li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            &:nth-child(1) {
+              background-image: url(../../images/index/main_top_slider01.jpg);
+              z-index: 1;
+            }
+            &:nth-child(2) {
+              background-image: url(../../images/index/main_top_slider02.jpg);
+            }
+            &:nth-child(3) {
+              background-image: url(../../images/index/main_top_slider03.jpg);
+            }
+          }
+        }
+        ul.vsl_textBox {
+          position: absolute;
+          left: 7%;
+          top: 62%;
+          z-index: 5;
+          li {
+            width: max-content;
+            color: #fff;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+            &.on {
+              display: block;
+            }
+            p {
+              font-size: 1.25rem;
+              word-break: keep-all;
+              letter-spacing: .2rem;
+              b{
+                font-weight: 700;
+              }
+            }
+            h3 {
+              font-size: 11.3rem;
+              font-family: Marcellus, Noto Sans KR, sans-serif;
+              word-break: keep-all;
+            }
+          }
+        }
+        .vsl_nav {
+          display: flex;
+          align-items: center;
+          position: absolute;
+          left: 7%;
+          bottom: 10%;
+          z-index: 5;
+          span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin: 0 12px;
+            border-radius: 50%;
+            background: #fff;
+            &.on {
+              width: 15px;
+              height: 15px;
+              border: 1px solid #fff;
+              background: transparent;
+            }
+          }
+        }
+      }
+    }
   }
 }
