@@ -1,3 +1,4 @@
-#visual {
+#main #visual {
   height: 100vh;
+  background: url(../../images/index/main_top_slider01.jpg) no-repeat center/cover;
 }
