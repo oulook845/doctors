@@ -1,4 +1,5 @@
 #main #visual {
+  width: 100%;
   height: 100vh;
 }
 #main #visual .inner .vsl_slide {
@@ -8,6 +9,7 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 #main #visual .inner .vsl_slide ul.vsl_bg li {
   width: 100%;
@@ -16,66 +18,112 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  opacity: 0;
+  transform: scale(130%);
+  transition: opacity 1s, transform 7s ease-out;
+}
+#main #visual .inner .vsl_slide ul.vsl_bg li.on {
+  opacity: 1;
+  transform: scale(100%);
 }
 #main #visual .inner .vsl_slide ul.vsl_bg li:nth-child(1) {
-  background-image: url(../../images/index/main_top_slider01.jpg);
-  z-index: 1;
+  background-image: url(../images/index/main_top_slider01.jpg);
 }
 #main #visual .inner .vsl_slide ul.vsl_bg li:nth-child(2) {
-  background-image: url(../../images/index/main_top_slider02.jpg);
+  background-image: url(../images/index/main_top_slider02.jpg);
 }
 #main #visual .inner .vsl_slide ul.vsl_bg li:nth-child(3) {
-  background-image: url(../../images/index/main_top_slider03.jpg);
+  background-image: url(../images/index/main_top_slider03.jpg);
 }
-#main #visual .inner .vsl_slide ul.vsl_textBox {
+#main #visual .inner .vsl_slide .slide_wrap {
+  width: 86%;
+  margin: 0 auto;
   position: absolute;
-  left: 7%;
+  left: 0;
+  right: 0;
   top: 62%;
   z-index: 5;
 }
-#main #visual .inner .vsl_slide ul.vsl_textBox li {
+#main #visual .inner .vsl_slide .slide_wrap ul.vsl_textBox {
+  width: 100%;
+  height: 240px;
+}
+#main #visual .inner .vsl_slide .slide_wrap ul.vsl_textBox li {
   width: max-content;
   color: #fff;
   position: absolute;
   left: 0;
   top: 0;
-  display: none;
+  opacity: 0;
 }
-#main #visual .inner .vsl_slide ul.vsl_textBox li.on {
-  display: block;
+#main #visual .inner .vsl_slide .slide_wrap ul.vsl_textBox li.on {
+  opacity: 1;
 }
-#main #visual .inner .vsl_slide ul.vsl_textBox li p {
+#main #visual .inner .vsl_slide .slide_wrap ul.vsl_textBox li.on span {
+  transform: translateY(0%);
+}
+#main #visual .inner .vsl_slide .slide_wrap ul.vsl_textBox li p {
   font-size: 1.25rem;
   word-break: keep-all;
   letter-spacing: 0.2rem;
+  overflow: hidden;
 }
-#main #visual .inner .vsl_slide ul.vsl_textBox li p b {
+#main #visual .inner .vsl_slide .slide_wrap ul.vsl_textBox li p span {
+  display: inline-block;
+  position: relative;
+  transform: translateY(-100%);
+  transition: transform 1s;
+}
+#main #visual .inner .vsl_slide .slide_wrap ul.vsl_textBox li p b {
   font-weight: 700;
 }
-#main #visual .inner .vsl_slide ul.vsl_textBox li h3 {
+#main #visual .inner .vsl_slide .slide_wrap ul.vsl_textBox li h3 {
   font-size: 11.3rem;
   font-family: Marcellus, Noto Sans KR, sans-serif;
   word-break: keep-all;
+  overflow: hidden;
 }
-#main #visual .inner .vsl_slide .vsl_nav {
+#main #visual .inner .vsl_slide .slide_wrap ul.vsl_textBox li h3 span {
+  display: inline-block;
+  transform: translateY(-100%);
+  transition: transform 1.5s;
+  transition-delay: 0.5s;
+}
+#main #visual .inner .vsl_slide .slide_wrap .vsl_nav {
   display: flex;
   align-items: center;
-  position: absolute;
-  left: 7%;
-  bottom: 10%;
-  z-index: 5;
 }
-#main #visual .inner .vsl_slide .vsl_nav span {
+#main #visual .inner .vsl_slide .slide_wrap .vsl_nav span {
   display: inline-block;
   width: 6px;
   height: 6px;
   margin: 0 12px;
   border-radius: 50%;
   background: #fff;
+  position: relative;
 }
-#main #visual .inner .vsl_slide .vsl_nav span.on {
+#main #visual .inner .vsl_slide .slide_wrap .vsl_nav span.on {
   width: 15px;
   height: 15px;
-  border: 1px solid #fff;
   background: transparent;
+}
+#main #visual .inner .vsl_slide .slide_wrap .vsl_nav span.on svg {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+#main #visual .inner .vsl_slide .slide_wrap .vsl_nav span.on svg .navGauge {
+  animation: navGauge 7s forwards linear;
+}
+@keyframes navGauge {
+  0% {
+    stroke-dashoffset: 80px;
+  }
+  100% {
+    stroke-dashoffset: 40px;
+  }
+}
+#main #visual .inner .vsl_slide .slide_wrap .vsl_nav span svg {
+  display: none;
 }

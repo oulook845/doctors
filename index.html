@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
+    <!-- top button -->
+    <div id="topButton">
+      <div class="topBtn_bg"></div>
+      <div class="topBtn_per">0 %</div>
+    </div>
+
     <!-- header -->
     <header id="header">
       <div class="hd_banner">
@@ -59,8 +65,8 @@
               <span></span>
             </button>
             <button class="closeBtn">
-                <span></span>
-                <span></span>
+              <span></span>
+              <span></span>
             </button>
           </div>
         </div>
@@ -88,30 +94,82 @@
           <h2 class="txt_hidden">Doctors</h2>
           <div class="vsl_slide">
             <ul class="vsl_bg">
-                <li></li>
-                <li></li>
-                <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
 
-            <ul class="vsl_textBox">
+            <div class="slide_wrap">
+              <ul class="vsl_textBox">
                 <li class="on">
-                    <p>시간을 멈추는 <b>피부의 힘</b>을 키웁니다.</p>
-                    <h3>Heal-Aging</h3>
+                  <p>
+                    <span>시간을 멈추는 <b>피부의 힘</b>을 키웁니다.</span>
+                  </p>
+                  <h3><span>Heal-Aging</span></h3>
                 </li>
                 <li>
-                    <p>시간을 이기는 <b>자연스러운 아름다움</b></p>
-                    <h3>Natural-Aging</h3>
+                  <p>
+                    <span>시간을 이기는 <b>자연스러운 아름다움</b></span>
+                  </p>
+                  <h3><span>Natural-Aging</span></h3>
                 </li>
                 <li>
-                    <p><b>결</b>이 다른 과정이 만드는 <b>격</b>이 다른 결과</p>
-                    <h3>Anti-Aging</h3>
+                  <p>
+                    <span><b>결</b>이 다른 과정이 만드는 <b>격</b>이 다른 결과</span>
+                  </p>
+                  <h3><span>Anti-Aging</span></h3>
                 </li>
-            </ul>
-
-            <div class="vsl_nav">
-                <span class="on"></span>
-                <span></span>
-                <span></span>
+              </ul>
+              <div class="vsl_nav">
+                <span>
+                  <svg>
+                    <circle cx="8" cy="8" r="5" stroke="rgba(195, 177, 148, 1)" stroke-width="2" fill="none"></circle>
+                    <circle
+                      class="navGauge"
+                      cx="8"
+                      cy="8"
+                      r="5"
+                      stroke="rgba(255,255,255, 1)"
+                      stroke-width="2"
+                      fill="none"
+                      stroke-dasharray="80px"
+                      stroke-dashoffset="80px"
+                    ></circle>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <circle cx="8" cy="8" r="5" stroke="rgba(195, 177, 148, 1)" stroke-width="2" fill="none"></circle>
+                    <circle
+                      class="navGauge"
+                      cx="8"
+                      cy="8"
+                      r="5"
+                      stroke="rgba(255,255,255, 1)"
+                      stroke-width="2"
+                      fill="none"
+                      stroke-dasharray="80px"
+                      stroke-dashoffset="80px"
+                    ></circle>
+                  </svg>
+                </span>
+                <span>
+                  <svg>
+                    <circle cx="8" cy="8" r="5" stroke="rgba(195, 177, 148, 1)" stroke-width="2" fill="none"></circle>
+                    <circle
+                      class="navGauge"
+                      cx="8"
+                      cy="8"
+                      r="5"
+                      stroke="rgba(255,255,255, 1)"
+                      stroke-width="2"
+                      fill="none"
+                      stroke-dasharray="80px"
+                      stroke-dashoffset="80px"
+                    ></circle>
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -137,6 +195,7 @@
 
     <!-- d3.js cdn -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="./js/common.js"></script>
+    <script type="module" src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
