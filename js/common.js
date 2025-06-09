@@ -20,13 +20,33 @@ const docHeight = document.documentElement.scrollHeight - document.documentEleme
 const topButton = document.getElementById("topButton"),
   topBtn_bg = topButton.querySelector(".topBtn_bg"),
   topBtn_per = topButton.querySelector(".topBtn_per");
-// 스크롤시 top button
+
+const headerElem = document.getElementById("header");
+const view_height = window.innerHeight;
+
+/* scroll 이벤트 */
 window.addEventListener("scroll", function () {
-  const currentScroll = getScrollData();
+  const currentScroll = getScrollData(); // 현재 스크롤 위치
+
+  // 스크롤시 top button 이벤트
+  if (currentScroll > 0) {
+    topBtn_per.classList.add("active");
+  } else {
+    topBtn_per.classList.remove("active");
+  }
   let scroll_percent = Math.floor((currentScroll / docHeight) * 100);
-  topBtn_per.textContent = `${scroll_percent} %`
+  topBtn_per.textContent = `${scroll_percent} %`; // 퍼센트 표시
+
   let rotateDeg = scroll_percent * 3.6;
-  topBtn_bg.style.transform = `rotate(${rotateDeg}deg)`
+  topBtn_bg.style.transform = `rotate(${rotateDeg}deg)`; // 내려간만큼 회전
+
+  // header 스타일 변경
+  if (currentScroll >= view_height - 200) {
+    headerElem.classList.add("on");
+  } else {
+    headerElem.classList.remove("on");
+  }
+  //
 });
 
 /* header */
