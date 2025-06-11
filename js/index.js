@@ -1,5 +1,11 @@
 import { getScrollData } from "./commonScroll.js";
 
+/* break points ##################### */
+const desktop_Breakpoint = Number(1440);
+const tablet_Breakpoint = Number(830);
+const mobile_Breakpoint = Number(358);
+
+
 /* visual ##################### */
 const visualElem = document.getElementById("visual");
 const visual_bg = visualElem.querySelector(".vsl_bg"),

@@ -1,3 +1,7 @@
+@import "./_breakpoint";
+// @include tablet(){}; 1440
+// @include mobile(){}; 385
+
 #header {
   width: 100%;
   color: #fff;
@@ -89,7 +93,8 @@
           display: inline-block;
           width: 16px;
           height: 16px;
-          background: url(../images/common/doctors-group.png) no-repeat center / cover;
+          background: url(../images/common/doctors-group.png) no-repeat center /
+            cover;
         }
       }
     }
@@ -131,7 +136,8 @@
             display: inline-block;
             width: 20px;
             height: 20px;
-            background: url(../images/common/glob-lang.png) no-repeat 0 0 / cover;
+            background: url(../images/common/glob-lang.png) no-repeat 0 0 /
+              cover;
           }
         }
         ul.langs_list {
@@ -230,12 +236,20 @@
 #footer {
   width: 100%;
   height: 792px;
-  background: url(../images/common/main_content05_bg.jpg) no-repeat center / cover;
+  background: url(../images/common/main_content05_bg.jpg) no-repeat center /
+    cover;
+  @include tablet() {
+    height: auto;
+    padding-top: 40%;
+  }
   .inner {
     width: 70%;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    @include tablet() {
+      flex-direction: column;
+    }
     .info_wrap {
       width: 65%;
       color: #fff;
@@ -253,22 +267,23 @@
           b {
             font-size: 1.064rem;
           }
-          p{
+          p {
             margin-top: 20px;
           }
           &.inquiryCall {
             p {
               font-size: 34px;
-              font-family: Marcellus,Noto Sans KR,sans-serif;
+              font-family: Marcellus, Noto Sans KR, sans-serif;
             }
           }
           &.pulsFriend {
-            p{
+            p {
               width: 54px;
               height: 54px;
               margin-left: auto;
               margin-right: auto;
-              background: url(../images/common/main_cont05_info_list02_icon.png) no-repeat center;
+              background: url(../images/common/main_cont05_info_list02_icon.png)
+                no-repeat center;
             }
           }
           &.directions {
@@ -331,25 +346,25 @@
     .ft_utils {
       color: #fff;
       opacity: 0.8;
-      span{
+      span {
         display: inline-block;
-        padding:0 20px;
+        padding: 0 20px;
         position: relative;
-        &:first-child{
+        &:first-child {
           padding-left: 0;
         }
-        &:last-child{
+        &:last-child {
           padding-right: 0;
         }
-        &:not(:last-child){
-          &::after{
-            content:"";
+        &:not(:last-child) {
+          &::after {
+            content: "";
             display: inline-block;
             width: 1px;
             height: 60%;
             background: #fff;
             position: absolute;
-            top:50%;
+            top: 50%;
             right: 0;
             transform: translateY(-50%);
           }
@@ -375,13 +390,13 @@
 
     .ft_icon {
       position: absolute;
-      top:26%;
+      top: 26%;
       right: 28%;
     }
     .familySite {
       color: #fff;
       position: absolute;
-      top:20%;
+      top: 20%;
       right: 20%;
       &:hover {
         button {
