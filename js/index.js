@@ -5,6 +5,7 @@ const desktop_Breakpoint = Number(1440);
 const tablet_Breakpoint = Number(830);
 const mobile_Breakpoint = Number(358);
 
+const currentMidea = window.outerWidth;
 
 /* visual ##################### */
 const visualElem = document.getElementById("visual");
@@ -59,8 +60,6 @@ const con1Elem_top = con1Elem.offsetTop, // con1 위치
   2. 스크롤만큼 opacity와 translateY 값 변경
   2-1. 지나간 거리 = 현재 높이 - con1높이
   2-2. 백분율 = (con1높이 / 지나간 거리) * 100
-  2-3. 
-  3. 
 */
 
 const con2Elem = document.getElementById("con2"),
@@ -84,9 +83,11 @@ function content_scroll() {
     }
 
     //con2
-    if(currentScroll > con2Elem_top - 400){
+    if (currentScroll > con2Elem_top - 400) {
       con2_conBox.classList.add("on");
     }
   });
 }
-content_scroll();
+if (currentMidea > tablet_Breakpoint) {
+  content_scroll();
+}
