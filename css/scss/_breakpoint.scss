@@ -1,9 +1,7 @@
 // Breakpoints
 $breakpoint-desktop: 1440px;
 $breakpoint-tablet: 830px;
-$breakpoint-mobile: 385px;
-// @include tablet(){}; 1440
-// @include mobile(){}; 385
+$breakpoint-mobile: 480px;
 
 /* ~ 1440px */
 @mixin desktop {

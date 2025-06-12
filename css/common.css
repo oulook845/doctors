@@ -229,7 +229,7 @@
     height: 1220px;
   }
 }
-@media (max-width: 386px) {
+@media (max-width: 481px) {
   #footer {
     height: auto;
   }
@@ -249,7 +249,7 @@
     transform: translate(-50%, -50%);
   }
 }
-@media (max-width: 386px) {
+@media (max-width: 481px) {
   #footer .inner {
     position: relative;
     left: auto;
@@ -272,7 +272,7 @@
   text-align: center;
   padding-bottom: 12%;
 }
-@media (max-width: 386px) {
+@media (max-width: 481px) {
   #footer .inner .info_wrap h3 {
     font-size: 38px;
   }
@@ -280,7 +280,7 @@
 #footer .inner .info_wrap .infoList {
   display: flex;
 }
-@media (max-width: 386px) {
+@media (max-width: 481px) {
   #footer .inner .info_wrap .infoList {
     flex-direction: column;
     gap: 40px;
@@ -293,7 +293,7 @@
 #footer .inner .info_wrap .infoList > div b {
   font-size: 1.064rem;
 }
-@media (max-width: 386px) {
+@media (max-width: 481px) {
   #footer .inner .info_wrap .infoList > div b {
     font-size: 18px;
   }
@@ -305,7 +305,7 @@
   font-size: 34px;
   font-family: Marcellus, Noto Sans KR, sans-serif;
 }
-@media (max-width: 386px) {
+@media (max-width: 481px) {
   #footer .inner .info_wrap .infoList > div.inquiryCall p {
     font-size: 14px;
   }
@@ -320,7 +320,7 @@
 #footer .inner .info_wrap .infoList > div.directions {
   font-size: 18px;
 }
-@media (max-width: 386px) {
+@media (max-width: 481px) {
   #footer .inner .info_wrap .infoList > div.directions {
     font-size: 14px;
   }
@@ -380,7 +380,7 @@
   left: 0;
   bottom: 0;
 }
-@media (max-width: 386px) {
+@media (max-width: 481px) {
   #footer .footer_bottom {
     padding: 4%;
     position: relative;
