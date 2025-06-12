@@ -227,11 +227,13 @@
 @media (max-width: 831px) {
   #footer {
     height: 1220px;
+    padding-bottom: 400px;
   }
 }
 @media (max-width: 481px) {
   #footer {
     height: auto;
+    padding-bottom: 0;
   }
 }
 #footer .inner {

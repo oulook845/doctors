@@ -243,9 +243,11 @@
   }
   @include tablet() {
     height: 1220px;
+    padding-bottom: 400px;
   }
   @include mobile() {
     height: auto;
+    padding-bottom: 0;
   }
   .inner {
     width: 70%;
